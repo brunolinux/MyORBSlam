@@ -1,0 +1,10 @@
+add_library(Camera
+    abstractcamera.cpp
+    abstractcamera.h
+    monocamera.cpp
+    monocamera.h
+    rgbdcamera.cpp
+    rgbdcamera.h
+    stereocamera.cpp
+    stereocamera.h
+    )
