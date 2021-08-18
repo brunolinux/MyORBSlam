@@ -6,7 +6,7 @@
 TEST_CASE("PyramidLevelExtractor", "[PyramidLevelExtractor]") {
     PyramidLevelExtractor extractor(0, 1., 300, 20, 7);
 
-    cv::Mat image = cv::imread("cats.jpg", 0);
+    cv::Mat image = cv::imread("../data/1305031452.791720.png", 0);
 
     auto keypoints = extractor.computeKeypoint(image);
 

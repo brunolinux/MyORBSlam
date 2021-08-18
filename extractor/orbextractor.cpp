@@ -218,7 +218,8 @@ void ORBExtractor::constructFeatureNumbersPerLevel()
 {
     m_numFeatureLevelVec.resize(m_numLevels);
 
-    float factor = 1.0f / m_scaleFactor;
+    //float factor = 1.0f / m_scaleFactor;
+    float factor = pow(1.0f / m_scaleFactor, 2);
     float nDesiredFeaturesPerLevel = m_numFeatures * (1 - factor) / (1 - pow(factor, m_numLevels));
 
     int sumFeatures = 0;

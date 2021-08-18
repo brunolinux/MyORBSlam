@@ -9,8 +9,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(OpenCV REQUIRED)
 find_package(Catch2 REQUIRED)
 
+add_subdirectory(core)
 add_subdirectory(camera)
 add_subdirectory(extractor)
+add_subdirectory(initializer)
 add_subdirectory(solver)
 add_subdirectory(test)
 

@@ -5,7 +5,7 @@
 TEST_CASE("ORB Extractor", "[ORBExtractor]") {
     ORBExtractor extractor(1000, 1.2, 8, 20, 7);
 
-    cv::Mat image = cv::imread("cats.jpg", 0);
+    cv::Mat image = cv::imread("../data/1305031452.791720.png", 0);
 
     std::vector<cv::KeyPoint> keypoints;
     cv::Mat descriptors;
