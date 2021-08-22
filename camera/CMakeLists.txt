@@ -10,8 +10,7 @@ add_library(Camera
     )
 
 target_link_libraries(Camera
-    PUBLIC ${OpenCV_LIBS}
-    PRIVATE Extractor)
+    PUBLIC ${OpenCV_LIBS} Core)
 
 target_include_directories(Camera
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

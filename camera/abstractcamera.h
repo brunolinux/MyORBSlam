@@ -1,7 +1,7 @@
 #ifndef ABSTRACTCAMERA_H
 #define ABSTRACTCAMERA_H
 
-#include "../frame.h"
+#include "frame.h"
 
 class AbstractExtractor;
 

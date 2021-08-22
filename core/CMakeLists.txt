@@ -1,6 +1,8 @@
 add_library(Core
     frame.cpp
-    frame.h)
+    frame.h
+    framewithdepth.cpp
+    framewithdepth.h)
 
 target_link_libraries(Core
     PUBLIC ${OpenCV_LIBS} Extractor

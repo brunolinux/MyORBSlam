@@ -2,7 +2,7 @@ file(GLOB SOURCE_FILES "*.cpp")
 add_executable(catch2_test ${SOURCE_FILES})
 
 target_link_libraries(catch2_test PRIVATE Catch2::Catch2)
-target_link_libraries(catch2_test PRIVATE Extractor)
+target_link_libraries(catch2_test PRIVATE Extractor Matcher)
 
 # old method
 #include(ParseAndAddCatchTests)

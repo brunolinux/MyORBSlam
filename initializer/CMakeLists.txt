@@ -5,8 +5,15 @@ add_library(Initializer
     )
 
 target_link_libraries(Initializer
-    PUBLIC ${OpenCV_LIBS}
-    PRIVATE Core)
+    PUBLIC ${OpenCV_LIBS} Matcher
+    )
+
+target_link_libraries(Initializer
+    PRIVATE ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+    )
+
+target_include_directories(Initializer
+    PRIVATE ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/DUtils)
 
 target_include_directories(Initializer
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
