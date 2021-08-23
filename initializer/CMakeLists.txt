@@ -1,3 +1,6 @@
+find_package(Threads REQUIRED)
+
+
 add_library(Initializer
     abstractinitializer.h
     monoinitializer.cpp
@@ -10,6 +13,7 @@ target_link_libraries(Initializer
 
 target_link_libraries(Initializer
     PRIVATE ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+    PRIVATE Threads::Threads
     )
 
 target_include_directories(Initializer

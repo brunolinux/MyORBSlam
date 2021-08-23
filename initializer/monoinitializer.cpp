@@ -28,10 +28,10 @@ bool MonoInitializer::initialize(std::shared_ptr<Frame> frame)
             m_matches = matcher.SearchForInitialization(m_reference.get(), m_target.get(), 100);
 
             if (checkFrameMatching(m_matches)) {
-                constructPose();
-
-                m_state = InitState::TargetPassed;
-                return true;
+                if (constructPose()) {
+                    m_state = InitState::TargetPassed;
+                    return true;
+                }
             }
         }
 
