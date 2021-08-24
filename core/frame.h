@@ -15,6 +15,7 @@ public:
 
     size_t getKeypointSize() const;
     const std::vector<cv::KeyPoint>& getUndistortedKeypoints() const;
+    const std::vector<cv::KeyPoint>& getKeypoints() const;
 
     std::vector<size_t> getFeatureIndexesInCircle(const cv::Point2f& point, const float  &r, const int minLevel, const int maxLevel) const;
 

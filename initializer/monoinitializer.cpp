@@ -646,7 +646,10 @@ int MonoInitializer::checkRt(const cv::Mat &R, const cv::Mat &t,
 
 
         vCosParallax.push_back(cosParallax);
-        points_3d[m_matches[i].src_idx] = cv::Point3f(p3dC1.at<float>(0), p3dC1.at<float>(1), p3dC1.at<float>(2));
+        points_3d[m_matches[i].src_idx] = cv::Point3f(p3dC1.at<float>(0),
+                                                      p3dC1.at<float>(1),
+                                                      p3dC1.at<float>(2));
+        triangulated_states[m_matches[i].src_idx] = true;
         nGood++;
     }
 

@@ -141,6 +141,11 @@ const std::vector<cv::KeyPoint> &Frame::getUndistortedKeypoints() const
     return m_kpsUn;
 }
 
+const std::vector<cv::KeyPoint> &Frame::getKeypoints() const
+{
+    return m_kps;
+}
+
 std::vector<size_t> Frame::getFeatureIndexesInCircle(const cv::Point2f &point, const float &r, const int minLevel, const int maxLevel) const
 {
     vector<size_t> indexes;

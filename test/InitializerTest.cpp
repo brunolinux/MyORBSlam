@@ -18,7 +18,7 @@ TEST_CASE("MonoInitializer Test", "[MonoInitializer]") {
     cv::Mat image1 = cv::imread("../data/1305031452.791720.png", 0);
     std::shared_ptr<Frame> frame_reference = std::make_shared<Frame>(image1, &extractor);
 
-    cv::Mat image2 = cv::imread("../data/1305031452.791720.png", 0);
+    cv::Mat image2 = cv::imread("../data/1305031452.823674.png", 0);
     std::shared_ptr<Frame> frame_target = std::make_shared<Frame>(image2, &extractor);
 
     MonoInitializer initializer(200, 1.0);
